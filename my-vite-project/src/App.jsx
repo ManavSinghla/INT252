@@ -1,15 +1,19 @@
 import React from "react";
 import './App.css'
+import Main from './1.jsx'
+import Header from './2.jsx'
+import Greet from './3.jsx'
 
 function App() {
   const [count, setCount] = React.useState(0);
+  const name="John";
+  const marks=75;
+  const display=marks>=40 ? "Pass" : "Fail";
   return (
     <>
-      <div>
-        <h1>Manav</h1>
-        <p>Count: {count}</p>
-        <button onClick={() => setCount(count + 1)}>Increment</button>
-      </div>
+    <h1>{name}</h1>
+    <Greet/>
+    <p>{display}</p>
     </>
   );
 }

@@ -1,7 +1,8 @@
 // Command to run program
 // npm init vite my-vite-project
+import React from "react";
 
-function App() {
+function Main() {
   const [count, setCount] = React.useState(0);
   return (
     <>
@@ -13,3 +14,5 @@ function App() {
     </>
   );
 }
+
+export default Main;
