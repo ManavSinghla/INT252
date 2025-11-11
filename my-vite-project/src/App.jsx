@@ -15,8 +15,6 @@ function App() {
     <>
     <h1>{name}</h1>
     <p>{display}</p>
-    <ClassComponent/>
-    <PropsComponent name="Alice"/>
     <GreetingCard name="Bob" message="Welcome to the React world!"/>
     </>
   );
