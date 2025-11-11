@@ -4,7 +4,7 @@ import Main from './1.jsx'
 import Header from './2.jsx'
 import Greet from './3.jsx'
 import ClassComponent from './4 class.jsx'
-import PropsComponent from './5 pros.jsx'
+import PropsComponent from './5 props.jsx'
 import GreetingCard from './6 Greeting Card.jsx'
 
 function App() {
