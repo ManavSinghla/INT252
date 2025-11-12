@@ -13,7 +13,7 @@ function App() {
   const display=marks>=40 ? "Pass" : "Fail";
   return (
     <>
-    <h1>{name}</h1>
+    <h1 className="text-red-500">{name}</h1>
     <p>{display}</p>
     <GreetingCard name="Bob" message="Welcome to the React world!"/>
     </>
