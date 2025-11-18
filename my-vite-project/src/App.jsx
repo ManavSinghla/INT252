@@ -9,7 +9,7 @@ import GreetingCard from './6 Greeting Card.jsx'
 import Counter from './7 state.jsx'
 import Counter1 from './8 counter.jsx'
 import Box from "./9 colourChangingbox.jsx";
-import WelcomeMessage from "./10 effect.jsx";
+import WelcomeMessage from "./10 useEffect.jsx";
 
 function App() {
   // const name="John";
