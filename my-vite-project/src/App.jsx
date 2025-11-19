@@ -11,6 +11,7 @@ import Counter1 from './8 counter.jsx'
 import Box from "./9 colourChangingbox.jsx";
 import WelcomeMessage from "./10 useEffect.jsx";
 import NameContext from "./11 useContext.jsx";
+import ThemeContext from "./12 dark Light mode.jsx";
 
 function App() {
   // const name="John";
@@ -20,7 +21,7 @@ function App() {
     <>
     {/* <h1 className="text-red-500">{name}</h1>
     <p>{display}</p> */}
-    <NameContext />
+    <ThemeContext />
     </>
   );
 }
