@@ -1,6 +1,4 @@
 import { useState, useEffect, useRef } from 'react';
-import './App.css';
-import Form from './17 forms2.jsx';
 
 function Timer(){
   const [count,SetCount]= useState(10);
@@ -12,12 +10,7 @@ function Timer(){
     
     return ()=> clearInterval(ref.current)
   });
-  return (
-  <>
-  <h1 className='m-2 p-2 text-blue-400'>{count >0 ? count : "Time's Up"} </h1>
-  <Form/>
-  </>
-  );
+  return <h1 className='m-2 p-2 text-blue-400'>{count >0 ? count : "Time's Up"} </h1>
 }
 
 export default Timer;
