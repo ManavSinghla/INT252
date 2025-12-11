@@ -1,12 +1,15 @@
 import './App.css';
-import Travel from './19 tavel form.jsx';
+import MyRoutes from './20 routes.jsx';
+import { BrowserRouter } from 'react-router-dom';
 
-function Timer(){
+function App(){
   return (
   <>
-  <Travel/>
+  <BrowserRouter>
+  <MyRoutes/>
+  </BrowserRouter>
   </>
   );
 }
 
-export default Timer;
+export default App;
