@@ -1,13 +1,10 @@
 import './App.css';
-import MyRoutes from './21 food delivery mini app.jsx';
-import { BrowserRouter } from 'react-router-dom';
+import Login from './0 question';
 
 function App(){
   return (
   <>
-  <BrowserRouter>
-  <MyRoutes/>
-  </BrowserRouter>
+  <Login/>
   </>
   );
 }
