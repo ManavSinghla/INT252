@@ -76,11 +76,38 @@
 // }
 // export default Login;
 
-
-
 // Create a React functional component named Users that:
 // Uses useEffect to fetch data from an API
 // https://jsonplaceholder.typicode.com/users
 // Stores the data in state using useState
 // Displays a list of user names
 // Shows “Loading…” while data is being fetched
+
+import { useState, useEffect } from "react";
+function Users() {
+  const [data, setData] = useState([]);
+  const [load, changeLoad] = useState(true);
+
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/users")
+    .then((res)=>res.json())
+    .then((data)=>{
+        setData(data);
+        changeLoad(false);
+    });
+  }, []);
+
+  if (load) return <h1>Loading....</h1>;
+  return (
+    <>
+      <h1>User List</h1>
+      <ul>
+        {data.map((user)=>(
+            <li>{user.name}</li>
+        ))}
+      </ul>
+    </>
+  );
+}
+
+export default Users;
