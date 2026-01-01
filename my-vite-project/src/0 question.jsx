@@ -83,31 +83,120 @@
 // Displays a list of user names
 // Shows “Loading…” while data is being fetched
 
-import { useState, useEffect } from "react";
-function Users() {
-  const [data, setData] = useState([]);
-  const [load, changeLoad] = useState(true);
+// import { useState, useEffect } from "react";
+// function Users() {
+//   const [data, setData] = useState([]);
+//   const [load, changeLoad] = useState(true);
 
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-    .then((res)=>res.json())
-    .then((data)=>{
-        setData(data);
-        changeLoad(false);
-    });
-  }, []);
+//   useEffect(() => {
+//     fetch("https://jsonplaceholder.typicode.com/users")
+//     .then((res)=>res.json())
+//     .then((data)=>{
+//         setData(data);
+//         changeLoad(false);
+//     });
+//   }, []);
 
-  if (load) return <h1>Loading....</h1>;
-  return (
-    <>
-      <h1>User List</h1>
-      <ul>
-        {data.map((user)=>(
-            <li>{user.name}</li>
-        ))}
-      </ul>
-    </>
-  );
-}
+//   if (load) return <h1>Loading....</h1>;
+//   return (
+//     <>
+//       <h1>User List</h1>
+//       <ul>
+//         {data.map((user)=>(
+//             <li>{user.name}</li>
+//         ))}
+//       </ul>
+//     </>
+//   );
+// }
 
-export default Users;
+// export default Users;
+
+
+
+// Create a React app using react-router-dom that:
+// Has two pages:
+// Home page
+// About page
+// Uses BrowserRouter, Routes, and Route
+// Displays navigation links to switch between pages
+// When user clicks About, it should navigate to /about
+// import {Link} from "react-router-dom"
+// function NavBar(){
+//     return(
+//         <>
+//         <Link to="/">Home</Link>
+//         <Link to="/about">About</Link>
+//         </>
+//     )
+// }
+// export default NavBar;
+
+// App.jsx
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import NavBar from "./NavBar";
+// import Home from "./pages/Home";
+// import About from "./pages/About";
+
+// function App() {
+//   return (
+//     <BrowserRouter>
+//       <NavBar />
+//       <Routes>
+//         <Route path="/" element={<Home />} />
+//         <Route path="/about" element={<About />} />
+//       </Routes>
+//     </BrowserRouter>
+//   );
+// }
+
+// export default App;
+
+
+// Displays a list of users on Home page
+// Each user name should be clickable
+// On click, navigate to:
+// /user/:id
+// On the User page, display:
+// User ID: <id>
+// Use useParams() to read the route parameter
+
+// function Home(){
+//     const users=[
+//         { id:1, name: "Manav"},
+//         { id:2, name: "ABC"},
+//         { id:3, name: "XYZ"}
+//     ]
+//     return(
+//         <>
+//         <h1>Users List</h1>
+//         <ul>
+//             {users.map((user)=>(
+//                 <li><Link to={`/users/${user.id}`}>{user.name}</Link></li>
+//             ))}
+//         </ul>
+//         </>
+//     )
+// }
+// export default Home;
+
+// App.jsx
+// import './App.css';
+// import Home from './0 question';
+// import {Route, Routes, BrowserRouter } from 'react-router-dom';
+// import User from './pages/user'
+
+// function App(){
+//   return (
+//   <>
+//   <BrowserRouter>
+//   <Routes>
+//     <Route path='/' element={<Home/>} />
+//     <Route path='/users/:id' element={<User/>} />
+//   </Routes>
+//   </BrowserRouter>
+//   </>
+//   );
+// }
+
+// export default App;

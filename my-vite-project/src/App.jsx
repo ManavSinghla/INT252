@@ -1,10 +1,17 @@
 import './App.css';
-import Users from './0 question';
+import Home from './0 question';
+import {Route, Routes, BrowserRouter } from 'react-router-dom';
+import User from './pages/user'
 
 function App(){
   return (
   <>
-  <Users/>
+  <BrowserRouter>
+  <Routes>
+    <Route path='/' element={<Home/>} />
+    <Route path='/users/:id' element={<User/>} />
+  </Routes>
+  </BrowserRouter>
   </>
   );
 }
